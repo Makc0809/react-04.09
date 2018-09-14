@@ -11,7 +11,7 @@ module.exports = {
         filename: 'bundle.js',
     },
     resolve: {
-        extensions: ['js', 'jsx'],
+        extensions: ['.js', '.jsx'],
         alias: {
             components: path.resolve(__dirname, 'src', 'components'),
         }
@@ -37,8 +37,8 @@ module.exports = {
     plugins: [
         new ExtractTextPlugin({ filename: 'style.css'}),
         new HtmlPlugin({
-            temlplate: path.resolve(__dirname, 'src', 'index.html'),
+            template: path.resolve(__dirname, 'src', 'index.html'),
             filename: 'index.html',
         })
     ]
-};
+}
